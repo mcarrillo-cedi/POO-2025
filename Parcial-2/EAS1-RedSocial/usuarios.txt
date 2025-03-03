@@ -1,4 +1,10 @@
 Facebook
-Juan 0
-Pedro 0
-Maria 0
+Mario
+Carlos
+Esteban
+FIN
+Mario 1
+Carlos
+Carlos 1
+Mario
+Esteban 0

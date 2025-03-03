@@ -8,7 +8,7 @@ int main()
 
     int opc = 0;
 
-    while (opc != 5)
+    while (opc != 7)
     {
         cout << "***** MENU *****" << endl;
         cout << "1) Mostrar Usuarios" << endl;
@@ -16,7 +16,8 @@ int main()
         cout << "3) Hacer Amigos" << endl;
         cout << "4) Mostrar Amigos de un usuario" << endl;
         cout << "5) Guardar informacion" << endl;
-        cout << "6) Salir" << endl;
+        cout << "6) Cargar información" << endl;
+        cout << "7) Salir" << endl;
         cin >> opc;
 
         switch (opc)
@@ -78,6 +79,12 @@ int main()
         }
 
         case 6:
+        {
+            red->cargarInformacion();
+            break;
+        }
+
+        case 7:
         {
             delete red;
             break;
