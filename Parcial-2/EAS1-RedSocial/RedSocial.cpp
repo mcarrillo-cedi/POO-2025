@@ -10,15 +10,15 @@ RedSocial::~RedSocial()
         delete u;
 }
 
-void RedSocial::MostrarUsuarios()
+void RedSocial::mostrarUsuarios()
 {
     for (auto u : usuarios)
     {
-        u->MostrarUsuario();
+        u->mostrarUsuario();
     }
 }
 
-void RedSocial::AgregarUsuario(Usuario *u)
+void RedSocial::agregarUsuario(Usuario *u)
 {
     usuarios.push_back(u);
 }

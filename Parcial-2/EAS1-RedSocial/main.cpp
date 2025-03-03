@@ -6,9 +6,9 @@ int main()
 {
     RedSocial *red = new RedSocial("Facebook");
 
-    red->AgregarUsuario(new Usuario("Juan"));
-    red->AgregarUsuario(new Usuario("Pedro"));
-    red->AgregarUsuario(new Usuario("Maria"));
+    red->agregarUsuario(new Usuario("Juan"));
+    red->agregarUsuario(new Usuario("Pedro"));
+    red->agregarUsuario(new Usuario("Maria"));
 
     int opc = 0;
 
@@ -26,7 +26,7 @@ int main()
         {
         case 1:
         {
-            red->MostrarUsuarios();
+            red->mostrarUsuarios();
             break;
         }
 
@@ -36,7 +36,7 @@ int main()
             Usuario *u = new Usuario();
             cin >> u->nombre;
 
-            red->AgregarUsuario(u);
+            red->agregarUsuario(u);
             break;
         }
 
@@ -46,14 +46,14 @@ int main()
             for (int i = 0; i < red->usuarios.size(); i++)
             {
                 cout << i << " - ";
-                red->usuarios[i]->MostrarUsuario();
+                red->usuarios[i]->mostrarUsuario();
                 cout << endl;
             }
             int x, y;
             cin >> x >> y;
 
-            red->usuarios[x]->AgregarAmigo(red->usuarios[y]);
-            red->usuarios[y]->AgregarAmigo(red->usuarios[x]);
+            red->usuarios[x]->agregarAmigo(red->usuarios[y]);
+            red->usuarios[y]->agregarAmigo(red->usuarios[x]);
             break;
         }
 
@@ -63,14 +63,14 @@ int main()
             for (int i = 0; i < red->usuarios.size(); i++)
             {
                 cout << i << " - ";
-                red->usuarios[i]->MostrarUsuario();
+                red->usuarios[i]->mostrarUsuario();
                 cout << endl;
             }
             int x;
             cin >> x;
 
-            red->usuarios[x]->MostrarUsuario();
-            red->usuarios[x]->MostrarAmigos();
+            red->usuarios[x]->mostrarUsuario();
+            red->usuarios[x]->mostrarAmigos();
 
             break;
         }

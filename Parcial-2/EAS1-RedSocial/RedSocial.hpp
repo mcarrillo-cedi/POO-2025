@@ -14,6 +14,6 @@ public:
     RedSocial(string nom) : nombre(nom) {}
     ~RedSocial();
 
-    void MostrarUsuarios();
-    void AgregarUsuario(Usuario *u);
+    void mostrarUsuarios();
+    void agregarUsuario(Usuario *u);
 };

@@ -13,7 +13,7 @@ public:
     Usuario() : nombre("") {};
     Usuario(string nom) : nombre(nom) {}
 
-    void MostrarUsuario();
-    void MostrarAmigos();
-    void AgregarAmigo(Usuario *u);
+    void mostrarUsuario();
+    void mostrarAmigos();
+    void agregarAmigo(Usuario *u);
 };
