@@ -21,5 +21,14 @@ void Usuario::MostrarAmigos()
 
 void Usuario::AgregarAmigo(Usuario *u)
 {
+    for (auto a : amigos)
+    {
+        if (a == u)
+        {
+            cout << "Ya son amigos" << endl;
+            return;
+        }
+    }
     amigos.push_back(u);
+    u->AgregarAmigo(this);
 }

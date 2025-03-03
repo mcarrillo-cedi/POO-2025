@@ -16,4 +16,6 @@ public:
 
     void MostrarUsuarios();
     void AgregarUsuario(Usuario *u);
+    void guardarInformacion();
+    void cargarInformacion();
 };

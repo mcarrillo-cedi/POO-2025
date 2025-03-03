@@ -4,11 +4,7 @@
 
 int main()
 {
-    RedSocial *red;
-
-    red->AgregarUsuario(new Usuario("Juan"));
-    red->AgregarUsuario(new Usuario("Pedro"));
-    red->AgregarUsuario(new Usuario("Maria"));
+    RedSocial *red = new RedSocial("Facebook");
 
     int opc = 0;
 
@@ -19,7 +15,8 @@ int main()
         cout << "2) Agregar Usuario" << endl;
         cout << "3) Hacer Amigos" << endl;
         cout << "4) Mostrar Amigos de un usuario" << endl;
-        cout << "5) Salir" << endl;
+        cout << "5) Guardar informacion" << endl;
+        cout << "6) Salir" << endl;
         cin >> opc;
 
         switch (opc)
@@ -53,7 +50,6 @@ int main()
             cin >> x >> y;
 
             red->usuarios[x]->AgregarAmigo(red->usuarios[y]);
-            red->usuarios[y]->AgregarAmigo(red->usuarios[x]);
             break;
         }
 
@@ -76,6 +72,12 @@ int main()
         }
 
         case 5:
+        {
+            red->guardarInformacion();
+            break;
+        }
+
+        case 6:
         {
             delete red;
             break;
