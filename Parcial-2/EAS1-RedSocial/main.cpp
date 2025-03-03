@@ -4,7 +4,7 @@
 
 int main()
 {
-    RedSocial *red;
+    RedSocial *red = new RedSocial("Facebook");
 
     red->AgregarUsuario(new Usuario("Juan"));
     red->AgregarUsuario(new Usuario("Pedro"));
